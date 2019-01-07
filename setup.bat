@@ -21,7 +21,7 @@ if not exist "%cd%\npm-cache" (
   mkdir "%cd%\npm-cache"
 )
 
-set PATH=%PATH%;%cd%\node-v%version%-win-x64\
+set PATH=%PATH%;%cd%\node-v%version%-win-x64\;%cd%\npm-global\
 
 call %cd%\node-v%version%-win-x64\npm config set prefix %cd%\npm-global --global
 call %cd%\node-v%version%-win-x64\npm config set cache %cd%\npm-cache --global
